@@ -1,10 +1,8 @@
-/* AvailableMeals.module.css */
-
-section {
+.meal {
   max-width: 50rem;
   width: 90%;
   margin: 2rem auto;
-  background-color:antiquewhite;
+  background-color: antiquewhite;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -17,11 +15,16 @@ ul {
 }
 
 li {
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
   padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  list-style: none;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ddd;
+  background-color: #fff;
 }
 
 li:last-child {
@@ -32,5 +35,3 @@ li span {
   font-weight: bold;
   color: #333;
 }
-
-/* Add additional styling based on your design preferences */
