@@ -5,14 +5,14 @@ import CartContext from "../../../store/cart-context";
 
 const MealItemForm = (props) => {
   const cartCtx = useContext(CartContext);
-  console.log("reinitialized cartCtx", cartCtx);
+  // console.log("reinitialized cartCtx", cartCtx);
   const addItemToCart = (event) => {
     event.preventDefault();
     // update the cartCtx.items
     const quantity = document.getElementById("amount" + props.id).value;
     // cartCtx.items.push(props.item)
     cartCtx.addItem({ ...props.item, quantity: quantity });
-    console.log("after addItemToCart", cartCtx);
+    // console.log("after addItemToCart", cartCtx);
   };
 
   return (

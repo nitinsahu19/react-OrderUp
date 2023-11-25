@@ -14,7 +14,10 @@ const CartProvider = (props) => {
       updateItems((prevItems) => {
         return prevItems.map((cartItem) =>
           cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
+            ? {
+                ...cartItem,
+                quantity: Number(cartItem.quantity) + Number(item.quantity),
+              }
             : cartItem
         );
       });
@@ -33,7 +36,6 @@ const CartProvider = (props) => {
     totalAmount: totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
-    // message: "click here",
   };
 
   return (
