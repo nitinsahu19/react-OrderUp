@@ -29,7 +29,13 @@ const CartProvider = (props) => {
     updateTotalAmount(totalAmount + item.price * item.quantity);
   };
 
-  const removeItemFromCartHandler = () => {};
+  const removeItemFromCartHandler = (itemId) => {
+    const itemToRemove = items.find((item) => item.id === itemId);
+
+    updateTotalAmount(totalAmount - itemToRemove.price);
+
+    updateItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
+  };
 
   const cartContext = {
     items: items,
@@ -40,7 +46,6 @@ const CartProvider = (props) => {
 
   return (
     <CartContext.Provider value={cartContext}>
-      {console.log("inside CartContext.Provider", cartContext)}
       {props.children}
     </CartContext.Provider>
   );
