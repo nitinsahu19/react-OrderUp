@@ -23,6 +23,7 @@ const Cart = (props) => {
     </ul>
   );
 
+  // it increases the quantity of a item in cart
   const itemIncreaseHandler = (itemId) => {
     cartCntx.addItem({
       ...cartCntx.items.find((item) => item.id === itemId),

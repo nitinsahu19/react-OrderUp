@@ -5,6 +5,7 @@ const CartProvider = (props) => {
   const [items, updateItems] = useState([]);
   const [totalAmount, updateTotalAmount] = useState(0);
 
+  // add item to cart
   const addItemToCartHandler = (item) => {
     // Check if the item is already in the cart
     const existingCartItem = items.find((cartItem) => cartItem.id === item.id);
@@ -29,6 +30,7 @@ const CartProvider = (props) => {
     updateTotalAmount(totalAmount + item.price * item.quantity);
   };
 
+  // remove the item from the cart
   const removeItemFromCartHandler = (itemId) => {
     const itemToRemove = items.find((item) => item.id === itemId);
 
@@ -37,6 +39,7 @@ const CartProvider = (props) => {
     updateItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
   };
 
+  // cart context
   const cartContext = {
     items: items,
     totalAmount: totalAmount,

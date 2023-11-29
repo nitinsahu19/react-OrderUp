@@ -13,6 +13,8 @@
   color: #fff;
   border-radius: 4px;
   margin-left: 1rem;
+  width: 91px;
+  height: 40px;
 }
 
 .form button:hover,

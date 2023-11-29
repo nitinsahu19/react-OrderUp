@@ -1,5 +1,5 @@
 import Header from "./components/Layout/Header";
-import React, { Fragment, useState } from "react";
+import { useState } from "react";
 import Meals from "./components/Meal/Meals";
 import Cart from "./components/Cart/Cart";
 import CartProvider from "./store/CartProvider";
