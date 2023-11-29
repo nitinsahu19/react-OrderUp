@@ -42,7 +42,7 @@ const Cart = (props) => {
     }
   };
 
-  const totalAmount = cartCntx.totalAmount;
+  const totalAmount = cartCntx.totalAmount.toFixed(2);
 
   return (
     <Modal onClose={props.onClose}>
